@@ -23,6 +23,8 @@ This file is part of Recent Entries.
 
 <cfset local.count = getSetting('CountToShow') />
 <cfset local.posts = getManager().getPostsManager().getPosts( count=local.count ) />
+<cfset local.basePath = getManager().getBlog().getBasePath() />
+
 
 <div id="RecentEntries">
 	<cfif eventName eq "RecentEntries-pod">
@@ -32,7 +34,7 @@ This file is part of Recent Entries.
 		<cfloop from="1" to="#min(local.count,arrayLen(local.posts))#" index="local.i">
 			<cfset local._post = local.posts[local.i] />
 			<li>
-				<a href="#local._post.getUrl()#">#local._post.getTitle()#</a>
+				<a href="#local.basePath##local._post.getUrl()#">#local._post.getTitle()#</a>
 				<cfif getSetting('BlurbLength') gt 0>
 					<cfset local.blurb = local._post.getExcerpt() />
 					<cfif len(local.blurb) eq 0>

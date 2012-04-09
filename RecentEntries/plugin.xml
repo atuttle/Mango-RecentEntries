@@ -20,7 +20,7 @@ VERSION INFORMATION:
 
 This file is part of RecentEntries.
 -->
-<plugin id="com.fusiongrokker.plugins.RecentEntries" name="Recent Entries" version="1.0.0" provider-name="Adam Tuttle | http://fusiongrokker.com" class="RecentEntries.plugin">
+<plugin id="com.fusiongrokker.plugins.RecentEntries" name="Recent Entries" version="1.0.1" provider-name="Adam Tuttle | http://fusiongrokker.com" class="RecentEntries.plugin">
 	<description><![CDATA[ Adds a Recent Entries Pod.<br/>
 	<br/>
 	Written by <a href="http://fusiongrokker.com">Adam Tuttle</a><br/>
